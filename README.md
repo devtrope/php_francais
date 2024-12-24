@@ -9,3 +9,5 @@ Ce projet est là pour réparer cette injustice ! L'idée est de **franciser tou
 ## Traduction anglaise
 
 Nan je rigole, apprenez le français, la roue tourne les gars, je vous ferais **aucune traduction**.
+
+![FRANCE!](https://hugelolcdn.com/i/532921.jpg "FRANCE")
