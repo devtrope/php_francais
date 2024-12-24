@@ -35,9 +35,34 @@ function est_declaree(mixed $variable, mixed ...$variables): bool
     return isset($variable, $variables);
 }
 
+function est_objet(mixed $valeur): bool
+{
+    return is_object($valeur);
+}
+
 function vaut_null(mixed $valeur): bool
 {
     return is_null($valeur);
+}
+
+function valeur_booleenne(mixed $valeur): bool
+{
+    return boolval($valeur);
+}
+
+function valeur_nombre_a_virgule(mixed $valeur): float
+{
+    return floatval($valeur);
+}
+
+function est_vide(mixed $valeur): bool
+{
+    return empty($valeur);
+}
+
+function peut_etre_appele(mixed $valeur, bool $seulement_syntaxe = false, string &$nom_appelable = null): bool
+{
+    return is_callable($valeur, $seulement_syntaxe, $nom_appelable);
 }
 
 function compte(Countable|array $valeur, int $mode = COUNT_NORMAL): int
@@ -68,4 +93,19 @@ function remplace_chaine(array|string $recherche, array|string $remplace, string
 function imploser(string $separateur, array $tableau): string
 {
     return implode($separateur, $tableau);
+}
+
+function retourne_type(mixed $valeur): string
+{
+    return gettype($valeur);
+}
+
+function imprime_r(mixed $valeur, bool $retour = false): string|true
+{
+    return print_r($valeur, $retour);
+}
+
+function detruire(mixed $valeur, mixed ...$valeurs): void
+{
+    unset($valeur, $valeurs);
 }
